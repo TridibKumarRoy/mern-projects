@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Build directories
+build/
+dist/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Dependency directories
+.bower_components/
+jspm_packages/
+# TypeScript
+*.tsbuildinfo
+# Coverage directories
+coverage/
+# Cache directories
+.cache/
+.next/
+# Miscellaneous
+.DS_Store
+*.pem
+*.lock
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Optional npm cache directory
+.npm/
+# Optional eslint cache
+.eslintcache
+# Service worker cache
+workbox-config.js
+# Parcel-bundler cache
+.cache/
+.parcel-cache/
+# SASS cache
+.sass-cache/
+# Jest
+jest.config.js
