@@ -23,3 +23,29 @@ exports.addBook = async(req, res, next) => {
         
     }
 }
+
+//* get all boks
+exports.getAllBooks = async (req, res, next) => {
+  try {
+    const books = await book.find()
+    return res.status(200).json({books})
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+}
+
+//* update a book
+exports.updateBook = async (req, res, next) => {
+  try {
+    const bookFU = await book.findById(req.params.id)
+    if (!bookFU) {
+      return res.status(400).json({ message: "Book not found!" });
+    }
+    const updatedBook = await book.updateOne({"_id":req.params.id}, req.body);
+    return res.status(200).json({ updatedBook, "message":"success" });
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+}
